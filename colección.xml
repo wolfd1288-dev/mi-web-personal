@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<miPerfil>
+    <!-- SECCIÓN DE GUITARRA -->
+    <guitarra>
+        <obra>
+            <titulo>Recuerdos de la Alhambra</titulo>
+            <autor>Francisco Tárrega</autor>
+            <estilo>Romanticismo</estilo>
+        </obra>
+        <obra>
+            <titulo>Asturias (Leyenda)</titulo>
+            <autor>Isaac Albéniz</autor>
+            <estilo>Nacionalismo</estilo>
+        </obra>
+        <obra>
+            <titulo>Capricho Árabe</titulo>
+            <autor>Francisco Tárrega</autor>
+            <estilo>Romanticismo</estilo>
+        </obra>
+    </guitarra>
+
+    <!-- SECCIÓN DE VIDEOJUEGOS -->
+    <videojuegos>
+        <juego>
+            <titulo>The Legend of Zelda: Breath of the Wild</titulo>
+            <plataforma>Nintendo Switch</plataforma>
+            <genero>Aventura</genero>
+        </juego>
+        <juego>
+            <titulo>Elden Ring</titulo>
+            <plataforma>PC / PS5</plataforma>
+            <genero>Souls-like</genero>
+        </juego>
+        <juego>
+            <titulo>Valorant</titulo>
+            <plataforma>PC</plataforma>
+            <genero>Shooter</genero>
+        </juego>
+    </videojuegos>
+</miPerfil>

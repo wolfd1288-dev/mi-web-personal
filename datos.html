@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Datos</title>
+    <script type="text/javascript" src="/ruxitagentjs_ICA7NVfqrux_10327251022105625.js" data-dtconfig="rid=RID_-1711245253|rpid=-893154561|domain=castillalamancha.es|reportUrl=/rb_bf82769wsq|app=6aa7270853b4a0c8|owasp=1|featureHash=ICA7NVfqrux|rdnt=1|uxrgce=1|cuc=zd8e90he|mel=100000|expw=1|dpvc=1|lastModification=1766408850278|postfix=zd8e90he|tp=500,50,0|srbbv=2|agentUri=/ruxitagentjs_ICA7NVfqrux_10327251022105625.js"></script><link rel="stylesheet" href="estilo.CSS">
+    <script src="codigo.js"></script>
+    
+</head>
+<body>
+
+    <div id="contenedor">
+        <header>
+            <h1>Recogida de Información</h1>
+        </header>
+
+        <div class="izquierda">
+            <nav>
+                <h3>Menú Principal</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="personal.html">Datos Personales</a></li>
+                    <li><a href="datos.html">Formulario</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="derecha">
+            <h1>Formulario de Intereses</h1>
+            
+            <p>Por favor, rellena el siguiente formulario con información personal</p>
+
+            
+            <form action="#" method="get" onsubmit="return validarFormulario()" id="formulariopersonal">
+                
+                
+                <label for="profesion">Profesión actual:</label><br>
+                <input type="text" id="profesion" name="profesion" required placeholder="Ej: Estudiante"><br><br>
+
+                
+                <p>¿Cuál es tu entorno preferido?</p>
+                <!-- esta parte la he cambiado porque los ID 
+                deben ser únicos para que funcione el label y el JS -->
+                <input type="radio" id="casa" name="entorno" value="casa">
+                <label for="casa">Casa</label><br>
+                
+                <input type="radio" id="playa" name="entorno" value="playa">
+                <label for="playa">Playa</label><br>
+                
+                <input type="radio" id="montana" name="entorno" value="montana">
+                <label for="montana">Montaña</label><br>
+                
+                <input type="radio" id="todos" name="entorno" value="todos">
+                <label for="todos">Todos</label><br><br>
+
+                
+                <p>¿Cuáles son tus aficiones?</p>
+                <input type="checkbox" id="deporte" name="aficion1" value="deporte">
+                <label for="deporte">Deporte</label><br>
+                
+                <input type="checkbox" id="musica" name="aficion2" value="musica">
+                <label for="musica">Música</label><br>
+                
+                <input type="checkbox" id="dibujo" name="aficion3" value="dibujo">
+                <label for="dibujo">Dibujo</label><br>
+                
+                <input type="checkbox" id="lectura" name="aficion4" value="lectura">
+                <label for="lectura">Lectura</label><br><br>
+                
+                
+            
+<hr style="border: 1px solid #ff7eb3; margin: 30px 0;">
+
+            <!-- tema de los seguidores -->
+            <h1>Gestión de Seguidores</h1>
+            <div style="background: rgba(13, 17, 23, 0.9); padding: 20px; border: 2px solid #ff7eb3; border-radius: 10px;">
+                <p>Introduce un nombre:</p>
+                <!-- onclick: borra el contenido al pinchar -->
+                <input type="text" id="inputSeguidor" placeholder="Nombre del amigo" onclick="limpiarInputSeguidor()">
+                <br><br>
+                
+                <button type="button" onclick="agregarSeguidor()" style="padding: 5px 10px; background-color: #21262d; color: white; border: 1px solid white;">Seguirme</button>
+                <button type="button" onclick="borrarSeguidor()" style="padding: 5px 10px; background-color:  #21262d; color: white; border: 1px solid white;">Dejar de Seguir</button>
+                <h3>Lista de amigos:</h3>
+                <ul id="listaSeguidores" style="font-weight: bold; font-size: 1.2em; background-color: white; color: black; padding: 20px; min-height: 50px;">
+                    <!-- aquí se añadirán los LI con javascript -->
+                </ul>
+            </div>
+
+            <hr style="border: 1px solid #ff7eb3; margin: 30px 0;">
+
+            <!-- POP-UP -->
+            <h1>Encuesta Rápida (POP-UP)</h1>
+            <div style="background: rgba(13, 17, 23, 0.9); padding: 20px; border: 2px solid #ff7eb3; border-radius: 10px;">
+                <label for="datoEdad">Introduce tu edad y haz clic fuera del recuadro:</label><br>
+                <!-- onblur: se ejecuta al salir del cuadro de texto -->
+                <input type="number" id="datoEdad" onblur="verificarEdadPopUp()" placeholder="Edad...">
+            </div>
+
+            <br><br>
+            <input type="submit" value="Enviar Datos" style="padding: 10px 20px; 
+                background-color: #4CAF50; color: white; border: none; cursor: pointer;">
+            </form>
+        </div>
+
+        <footer>
+            Alba Naya Costa
+        </footer>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Datos Personales</title>
+    <script type="text/javascript" src="/ruxitagentjs_ICA7NVfqrux_10327251022105625.js" data-dtconfig="rid=RID_-820631938|rpid=-1013931384|domain=castillalamancha.es|reportUrl=/rb_bf82769wsq|app=6aa7270853b4a0c8|owasp=1|featureHash=ICA7NVfqrux|rdnt=1|uxrgce=1|cuc=zd8e90he|mel=100000|expw=1|dpvc=1|lastModification=1765164310810|postfix=zd8e90he|tp=500,50,0|srbbv=2|agentUri=/ruxitagentjs_ICA7NVfqrux_10327251022105625.js"></script><link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <div id="contenedor">
+        <header>
+            <h1>Mi Perfil Personal</h1>
+        </header>
+
+        <div class="izquierda">
+            <nav>
+                <h3>Menú Principal</h3>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="personal.html">Datos Personales</a></li>
+                    <li><a href="datos.html">Formulario</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="derecha">
+            <h1>Datos Personales</h1>
+
+            <!-- tabla con nombre/apellido en una fila y dirección combinada -->
+            <table>
+                <tr>
+                    <td><strong>Nombre:</strong> Alba </td>
+                    <td><strong>Apellidos:</strong> Naya Costa </td>
+                </tr>
+                <tr>
+                    <!-- colspan="2" combina dos celdas en una -->
+                    <td colspan="2"><strong>Contacto:</strong> wolfd1288@gmail.com </td>
+                </tr>
+            </table>
+            <!-- Dentro de <div class="derecha">, debajo de los párrafos -->
+<hr style="border: 1px solid #ff7eb3; margin: 30px 0;">
+<h1>Mis Colecciones (XML)</h1>
+<div style="text-align: center; margin-bottom: 20px;">
+    <button type="button" onclick="cargarXML()" style="padding: 10px 20px; background-color: #ff7eb3; color: black; border: none; cursor: pointer; font-weight: bold; border-radius: 5px;">
+        Cargar Listados Musicales y Juegos
+    </button>
+</div>
+<div id="visorXML"></div>
+
+<!-- Aquí se inyectará el contenido transformado -->
+<div id="visorXML"></div>
+
+            <!-- Foto personal  -->
+            <div style="text-align: center; margin: 20px;">
+                <img src="foto.jpg" alt="Foto Personal" width="150" style="border: 5px solid white; box-shadow: 0 0 5px black;">
+            </div>
+
+            <!-- Párrafo explicativo -->
+            <p>
+                Actualmente dedico mi tiempo a la guitarra, asistiendo a clases en un Grado Superior
+                de DAM (Desarrollo de Aplicaciones Multiplataforma) y jugando videojuegos.
+                Otras de mis aficiones es el deporte (fútbol y baloncesto) y el dibujo.
+            </p>
+
+            <!-- Enlace externo relacionado con afición -->
+            <p>
+                Aquí puedes ver el canal de youtube de la orquesta de guitarras en la que participo como
+                concertista:
+                <a href="https://youtu.be/Zu-gu54ZRiQ?si=tIDfZ7NGQ0UVGD0w" target="_blank" style="font-weight: bold;">Orquesta de Guitarras de Albacete</a>.
+            </p>
+        </div>
+
+        <footer>
+            Alba Naya Costa
+        </footer>
+    </div>
+
+</body>
+</html>

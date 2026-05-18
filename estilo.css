@@ -1,0 +1,262 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* Color de fondo general oscuro*/
+    background-color: #0d1117; 
+    color: #e6edf3;
+}
+
+/* CONTENEDOR PRINCIPAL */
+#contenedor {
+    width: 90%;
+    margin: 20px auto;
+    background-color: #161b22; 
+    border: 2px solid #ff7eb3; 
+    box-shadow: 0 0 20px rgba(255, 126, 179, 0.3); 
+}
+
+/* CABECERA */
+header {
+    width: 100%;
+    height: 100px;
+    background-color: #1f1a2e;
+    color: #ff7eb3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #ff7eb3;
+}
+
+header h1 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #ff7eb3; /* Efecto neón */
+}
+
+/* IZQUIERDA (MENÚ) */
+.izquierda {
+    width: 25%;
+    height: 600px;
+    float: left;
+    background-color: #0d1117;
+    padding: 20px;
+    border-right: 1px solid #30363d;
+}
+
+/* ESTILOS DEL MENÚ */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin-bottom: 15px;
+}
+
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #21262d; /* Botón oscuro */
+    padding: 12px;
+    border: 2px solid #ff7eb3; /* Borde rosa */
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: #ff7eb3; /* Al pasar el ratón, se vuelve rosa */
+    color: #1f1a2e; 
+    box-shadow: 0 0 15px #ff7eb3; 
+}
+
+/* DERECHA (CONTENIDOS) */
+.derecha {
+    width: 75%;
+    height: 600px;
+    float: left;
+    padding: 30px;
+    overflow-y: auto;
+    
+    /* IMAGEN DE FONDO*/
+    background-image: url('fondo.jpg'); 
+    background-size: cover;       
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+/* ESTILOS */
+.derecha h1 {
+    text-align: center;
+    background-color: rgba(13, 17, 23, 0.85);
+    color: #ff7eb3;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ff7eb3;
+    margin-top: 0;
+}
+
+/* Párrafos con fondo para que se lean sobre la imagen */
+.derecha p {
+    text-align: justify;
+    padding: 15px;
+    color: #fff;
+    background-color: rgba(16, 24, 60, 0.85);
+    border-radius: 8px;
+    border-left: 5px solid #ff7eb3;
+    transition: background-color 0.4s, transform 0.2s;
+    line-height: 1.5;
+}
+
+/* Al pasar por encima, cambiar color de fondo */
+.derecha p:hover {
+    background-color: rgba(255, 126, 179, 0.9);
+    color: #000;
+    cursor: default;
+}
+
+/* TABLAS */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: rgba(13, 17, 23, 0.9);
+    margin-bottom: 20px;
+    color: white;
+}
+
+table, th, td {
+    border: 2px solid #ff7eb3;
+}
+
+td {
+    padding: 12px;
+    text-align: center;
+}
+
+/* FORMULARIO */
+form { 
+    background-color: rgba(13, 17, 23, 0.95) !important;
+    color: white;
+    border: 2px solid #ff7eb3 !important;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 0 15px rgba(255, 126, 179, 0.2);
+}
+
+form p {
+    background: none !important;
+    border: none !important;
+    padding: 15px 0 5px 0 !important;
+    color: #ff7eb3 !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+}
+
+label[for="profesion"]{
+    display: block; /*pone el texto en una línea propia*/
+    margin-bottom: 8px; /*deja espacio antes de la caja*/
+    font-size: 1.1em;
+
+}
+
+input[type="text"]{
+    width: 100%; /*la caja ocupa todo el ancho disponible*/
+    background-color: #0d1117;
+    border: 1px solid #30363d;
+    color: #e6edf3;
+    padding: 12px; /*caja más alta*/
+    border-radius: 6px;
+    margin-bottom: 10px;
+    transition: border 0.3s;
+
+}
+
+input[type="text"]:focus{
+    border-color: #ff7eb3; /*al escribir se ilumina en rosa*/
+    outline: none;
+
+}
+
+input[type="radio"], input[type="checkbox"]{
+    transform: scale(1.3);/*los botones son un poco más grandes*/
+    margin-right: 10px;
+    margin-bottom: 10px;
+    accent-color: #ff7eb3; /*cambia el color del check a rosa*/
+    cursor: pointer;
+
+}
+
+label{
+    cursor: pointer;
+    margin-right: 15px; /*separación lateral*/
+
+}
+
+/* BOTÓN DE ENVIAR*/
+input[type="submit"]{
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #ff7eb3 !important;
+    color: #0d1117 !important;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1.1em;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+
+}
+
+input[type="submit"]:hover {
+    background-color: #ff9bc2 !important;
+    transform: translateY(-2px); /*efecto de "elevación"*/
+    box-shadow: 0 0 15px #ff7eb3;
+
+}
+
+
+/* ENLACES EN EL TEXTO */
+.derecha a {
+    color: #ffcae0;
+    text-decoration: underline;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    clear: both;
+    width: 100%;
+    height: 60px;
+    background-color: #0d1117;
+    color: #8b949e;
+    text-align: center;
+    padding-top: 20px;
+    border-top: 2px solid #ff7eb3;
+}
+
+/* Scrollbar personalizado*/
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #0d1117; 
+}
+::-webkit-scrollbar-thumb {
+    background: #ff7eb3; 
+    border-radius: 5px;
+}
+#formulariopersonal{
+    background-size: 150%;
+
+}
