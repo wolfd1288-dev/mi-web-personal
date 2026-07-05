@@ -1,5 +1,4 @@
-//personalizar la alertra con sweetalert2
-const Swal = require('sweetalert2')
+
 //validación del formulario principal
 function validarFormulario(){
 //referencia a los campos
@@ -119,3 +118,68 @@ function verificarEdadPopUp(){
     
 }
 }
+function cargarXML() {
+    var xmlPath = "coleccion.xml";
+    var xslPath = "transformacion.xsl";
+    function cargarArchivo(url) {
+        return fetch(url).then(response => response.text());
+    }
+    Promise.all([cargarArchivo(xmlPath), cargarArchivo(xslPath)]).then(([xmlText, xslText]) => {
+        var parser = new DOMParser();
+        var xml = parser.parseFromString(xmlText, "application/xml");
+        var xsl = parser.parseFromString(xslText, "application/xml");
+    
+    if (window.XSLTProcessor) {
+        var xsltProcessor = new XSLTProcessor();
+        xsltProcessor.importStylesheet(xsl);
+        var resultDocument = xsltProcessor.transformToFragment(xml, document);
+        var contenedor = document.getElementById(visorXML);
+        contenedor.innerHTML = "";
+        contenedor.appendChild(resultDocument);
+    }
+    })
+    .catch(error => {
+        console.error("Error cargando archivos XML/XSL:", error);
+        alert("No se puede cargar la colección. Asegúrate de estar usando un servidor (como Live Server).");
+    })
+}
+function validarFormulario() {
+    var profesion = document.getElementById("profesion");
+    var rediosEntorno = document.getElementsByName("entorno");
+    if (profesion.value.trim().length < 3){
+        Swal.fire({
+            icon: 'Error',
+            title: 'Campo incompleto',
+            text: 'La profesión debe tener al menos 3 caracteres'
+        });
+        profesion.focus();
+        return false;
+    }
+    var entornoSeleccionado = false;
+    for (var i = 0; i < radiosEntorno.length; i++){
+        if (radiosEntorno[i].checked){
+            entornoSeleccionado = true;
+            break;
+        }
+    }
+    if(!entornoSeleccionado){
+        Swal.fire('Error', 'Por favor, selecciona un entorno', 'warning');
+        return false;
+    }
+    return true;
+}
+    function verificarEdadPopUp(){
+        var inputEdad = document.getElementById("datoEdad");
+        var edad = parseInt(inputEdad.value);
+        if (!isNaN(edad)){
+            var urlDestino = "";
+            if(edad < 18){
+                urlDestino = "infantil.html";
+            }
+            else{
+                urlDestino = "profesional.html";
+
+            }
+            window.open(urlDestino, "_blank", "width=800, heigth=600");
+        }
+    }
